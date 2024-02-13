@@ -20,6 +20,8 @@ h1{
 .second-ball{
     font-size: 22px;
     font-weight: bold;
+    font-size: larger;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     justify-content: center;
     margin: 20px auto;
     line-height: 100px;
