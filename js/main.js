@@ -1,12 +1,16 @@
 'use strict'
 var ballSize = 100
 var maxDiameter = 400
+var minDiameter = 200
+var ball1Size = 100
+var ball2Size = 100
 var elBall1 = document.querySelector('.ball')
 var elBall2 = document.querySelector('.second-ball')
 var elBall3 = document.querySelector('.third-ball')
-var ball1Size = 100
-var ball2Size = 100
-var minDiameter = 200
+var elBall4 = document.querySelector('.fourth-ball')
+var elBall5 = document.querySelector('.fifth-ball')
+var elBall6 = document.querySelector('.sixth-ball')
+var elBody = document.querySelector('body')
 
 function onBall1Click() {
     var randColor = getRandomColor()
@@ -65,8 +69,26 @@ function onBall4Click(){
 
 }
 
+
 function onBall5Click(){
-    var elBody = document.querySelector('body')
     var randColor = getRandomColor()
     elBody.style.backgroundColor = randColor
+}
+
+function onBall6Click(){
+    elBody.style.backgroundColor = 'black'
+    elBall1.style.width = 100 + 'px'
+    elBall1.style.height = 100 + 'px'
+    elBall1.innerHTML = 100
+    elBall1.style.backgroundColor = 'purple'
+
+    elBall2.style.width = 100 + 'px'
+    elBall2.style.height = 100 + 'px'
+    elBall2.innerHTML = 100
+    elBall2.style.backgroundColor = 'green'
+
+    
+
+
+    
 }
