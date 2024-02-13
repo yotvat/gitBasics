@@ -17,3 +17,15 @@ h1{
     border-radius: 50%;
     transition: 1s;
 }
+.second-ball{
+    font-size: 22px;
+    font-weight: bold;
+    justify-content: center;
+    margin: 20px auto;
+    line-height: 100px;
+    width: 100px;
+    height: 100px;
+    background-color:rgb(61, 157, 93);
+    border-radius: 50%;
+    transition: 1s;
+}
