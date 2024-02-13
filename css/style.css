@@ -4,3 +4,11 @@ body{
 h1{
     color: rgb(237, 228, 228);
 }
+.ball{
+    margin: auto;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    background-color:rgb(110, 61, 157);
+    border-radius: 50%;
+}
