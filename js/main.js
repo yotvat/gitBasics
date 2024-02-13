@@ -11,10 +11,11 @@ var elBall4 = document.querySelector('.fourth-ball')
 var elBall5 = document.querySelector('.fifth-ball')
 var elBall6 = document.querySelector('.sixth-ball')
 var elBody = document.querySelector('body')
+var gInterval
 
 function onBall1Click() {
     var randColor = getRandomColor()
-    ball1Size = getRandomInt(80,401)
+    ball1Size = getRandomInt(80, 401)
     if (ball1Size > maxDiameter) {
         ball1Size = 100
     }
@@ -26,7 +27,7 @@ function onBall1Click() {
 
 function onBall2Click() {
     var randColor = getRandomColor()
-    ball2Size = getRandomInt(80,401)
+    ball2Size = getRandomInt(80, 401)
     if (ball2Size > maxDiameter) {
         ball2Size = 100
     }
@@ -36,7 +37,7 @@ function onBall2Click() {
     elBall2.style.backgroundColor = randColor
 }
 
-function onBall3Click(){
+function onBall3Click() {
     var ball1Color = elBall2.style.backgroundColor
     var ball2Color = elBall1.style.backgroundColor
     var prevBall1Size = ball1Size
@@ -54,32 +55,32 @@ function onBall3Click(){
     elBall2.style.backgroundColor = ball2Color
 }
 
-function onBall4Click(){
-    var ball1Reduce = getRandomInt(20,61)
-    var ball2Reduce = getRandomInt(20,61)
+function onBall4Click() {
+    var ball1Reduce = getRandomInt(20, 61)
+    var ball2Reduce = getRandomInt(20, 61)
     if (ball1Size < minDiameter) {
         ball1Size = 100
     }
 
-    elBall1.style.width = (ball1Size-ball1Reduce) + 'px'
-    elBall1.style.height = (ball1Size-ball1Reduce) + 'px'
-    elBall1.innerHTML = ball1Size-ball1Reduce
-    elBall1.innerHTML = ball1Size-ball1Reduce
+    elBall1.style.width = (ball1Size - ball1Reduce) + 'px'
+    elBall1.style.height = (ball1Size - ball1Reduce) + 'px'
+    elBall1.innerHTML = ball1Size - ball1Reduce
+    elBall1.innerHTML = ball1Size - ball1Reduce
 
-    elBall2.style.width = (ball2Size-ball2Reduce) + 'px'
-    elBall2.style.height = (ball2Size-ball2Reduce) + 'px'
-    elBall2.innerHTML = ball2Size-ball2Reduce
-    elBall2.innerHTML = ball2Size-ball2Reduce
+    elBall2.style.width = (ball2Size - ball2Reduce) + 'px'
+    elBall2.style.height = (ball2Size - ball2Reduce) + 'px'
+    elBall2.innerHTML = ball2Size - ball2Reduce
+    elBall2.innerHTML = ball2Size - ball2Reduce
 
 }
 
 
-function onBall5Click(){
+function onBall5Click() {
     var randColor = getRandomColor()
     elBody.style.backgroundColor = randColor
 }
 
-function onBall6Click(){
+function onBall6Click() {
     elBody.style.backgroundColor = 'black'
     elBall1.style.width = 100 + 'px'
     elBall1.style.height = 100 + 'px'
@@ -90,4 +91,21 @@ function onBall6Click(){
     elBall2.style.height = 100 + 'px'
     elBall2.innerHTML = 100
     elBall2.style.backgroundColor = 'green'
+}
+
+function onBall6Mouseover() {
+    setTimeout(()=>{
+        gInterval = setInterval(()=>{
+            onBall1Click()
+            onBall2Click()
+            onBall3Click()
+            onBall4Click()
+
+        },2000)
+    },2000)
+setTimeout(()=>{
+    clearInterval(gInterval)
+    onBall6Click()
+},12000)
+    
 }
