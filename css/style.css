@@ -1,14 +1,17 @@
 body{
+    text-align: center;
     background-color: black;
 }
 h1{
     color: rgb(237, 228, 228);
 }
 .ball{
+    justify-content: center;
     margin: auto;
     text-align: center;
     width: 100px;
     height: 100px;
     background-color:rgb(110, 61, 157);
     border-radius: 50%;
+    transition: 1.2s;
 }
