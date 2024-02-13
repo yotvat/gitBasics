@@ -6,9 +6,12 @@ h1{
     color: rgb(237, 228, 228);
 }
 .ball{
+    
+    font-size: 22px;
+    font-weight: bold;
     justify-content: center;
     margin: auto;
-    text-align: center;
+    line-height: 100px;
     width: 100px;
     height: 100px;
     background-color:rgb(110, 61, 157);
